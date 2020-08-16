@@ -5,7 +5,7 @@ $(function(){
 
   //header ->
   //hamburger menu
-  $(document).on('click', '#hamburger', function(){
+  $(document).on('click', '#hamburger, a[href^="./"]', function(){
     $('#nav-mask').fadeToggle(500);
     $('#hamburger-icon').toggleClass('show');
   });
