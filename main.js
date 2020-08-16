@@ -1,7 +1,7 @@
 $(function(){
   //include
-  $('#header').load('include/header.html')
-  $('#footer').load('include/footer.html')
+  $('#header').load('include/header.html');
+  $('#footer').load('include/footer.html');
 
   //header ->
   //hamburger menu
@@ -25,6 +25,8 @@ $(function(){
   var $mv = $('#mv-img')
   var img = new Image();
   img.src = $mv.attr('src')
-  $mv.height(img.height);
-  $('.mv, #rect').height(img.height * 1.16);
+  $(window).on('load', function(){
+    $mv.height(img.height);
+    $('.mv, #rect').height(img.height * 1.16);
+  })
 });
